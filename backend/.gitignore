@@ -1,0 +1,5 @@
+node_modules/
+.env
+
+# Database exports contain user data (password hashes) - never commit
+backup/

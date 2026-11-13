@@ -1,0 +1,9 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencies and env files are gitignored per-subfolder (backend/.gitignore, frontend/.gitignore)
