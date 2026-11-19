@@ -108,12 +108,8 @@ frontend/
 - Anime and character data is provided by [AniList](https://anilist.co) via their public GraphQL API. This project is not affiliated with AniList.
 - No AniList data is stored permanently — it's fetched live and cached temporarily (5–30 minutes depending on endpoint) to reduce upstream API load.
 
-## Current status & documentation
+## Status and limitations
 
-**Status (audit 2026-11-13):** Functional MERN app, hardened for a small deployment: CSRF defence, input validation, zxcvbn password-strength policy, change-password with session invalidation, generic 5xx errors, 34 backend tests (9 use a throwaway MongoDB), Docker and CI files. Bookmarks are backend-only. Docker images and the frontend UI have not been verified end to end in a browser. No forgot-password flow. See PROJECT_CONTEXT.md for details.
+A working MERN app, hardened for a small deployment: CSRF defence (the API requires an `X-Requested-With` header), server-side input validation, a password-strength policy, and change-password with sign-out of other devices. Docker files for the backend and frontend are included.
 
-| Document | Purpose |
-|---|---|
-| [How to run.md](<How to run.md>) | Local setup, env vars, ports, troubleshooting |
-| [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) | Deep technical context for AI assistants and new developers |
-| [CLAUDE.md](CLAUDE.md) | Short entry point that tells AI tools what to read and what not to touch |
+Known limitations: bookmarks are available through the API only (there is no UI for them yet), there is no forgot-password flow, and the Docker images have not been verified end to end.
